@@ -6,8 +6,6 @@ This contains web development, desktop application development and other softwar
 
 I created this project because I want to learn more about shell scripting.
 
-## Usage
-
 ## Requirements
 * The `git` tool
 
