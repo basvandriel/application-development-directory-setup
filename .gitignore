@@ -1,0 +1,4 @@
+### IDE specific files
+## JetBrains IDE's
+/.idea/
+*.iml
