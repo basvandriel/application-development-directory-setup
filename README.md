@@ -8,16 +8,6 @@ I created this project because I want to learn more about shell scripting.
 
 ## Usage
 
-# wordpress-skeleton
-This repository contains a pre-configured WordPress boilerplate with common settings
-for better development and deployment.
-
-The project was designed to work with an Apache server.
-
-I started this project because I wanted to learn more about WordPress and shell scripting.
-
-There are currently only new WordPress installations supported.
-
 ## Requirements
 * The `git` tool
 
