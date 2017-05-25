@@ -30,7 +30,7 @@ git clone https://github.com/basvandriel/software-development-directory-setup.gi
 ```
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under The Unlicensed - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Authors
 This project was initially created by [Bas van Driel](https://github.com/basvandriel "GitHub page") ([@bvandriel](https://twitter.com/bvandriel "Twitter page")), where [these people](https://github.com/basvandriel/WWW/graphs/contributors) contributed to it.
