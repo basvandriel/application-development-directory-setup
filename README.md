@@ -20,7 +20,6 @@ There are currently only new WordPress installations supported.
 
 ## Requirements
 * The `git` tool
-* The unix `make` tool
 
 ## Installation
 Clone the repository to any directory on your computer.
@@ -37,5 +36,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 This project was initially created by [Bas van Driel](https://github.com/basvandriel "GitHub page") ([@bvandriel](https://twitter.com/bvandriel "Twitter page")), where [these people](https://github.com/basvandriel/WWW/graphs/contributors) contributed to it.
 
 ## Links
-* [Source code](https://github.com/basvandriel/wordpress-skeleton)
-* [Issue tracker](https://github.com/basvandriel/wordpress-skeleton/issues)
+* [Source code](https://github.com/basvandriel/software-development-directory-setup)
+* [Issue tracker](https://github.com/basvandriel/software-development-directory-setup/issues)
