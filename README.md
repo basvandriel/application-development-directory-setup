@@ -1,4 +1,4 @@
-# software-development-directory-setup
+# application-development-directory-setup
 
 This repository contains scripts to setup my personal directory setup for application development.
 
