@@ -12,10 +12,14 @@ SET WEB_DEVELOPMENT_ARCHIVE_FOLDERS=Front_end_projects Back_end_projects Scrapbo
 SET MOBILE_DEVELOPMENT_FOLDERS=Android_projects IOS_projects
 SET MOBILE_DEVELOPMENT_ARCHIVE_FOLDERS=Android_projects IOS_projects Scrapboard Exercise Other_stuff
 
+:: Set the specific desktop application development folders we want to create
+SET DESKTOP_APPLICATION_DEVELOPMENT_FOLDERS=Projects
+SET DESKTOP_APPLICATION_DEVELOPMENT_ARCHIVE_FOLDERS=Projects Scrapboard Exercise Other_stuff
+
 :: Set the specific other application development folders we want to create
 SET OTHER_APPLICATION_DEVELOPMENT_FOLDERS=Projects
 SET OTHER_APPLICATION_DEVELOPMENT_ARCHIVE_FOLDERS=Projects Scrapboard Exercise Other_stuff
-setlocal
+
 :: Welcome the user
 echo Welcome to the application development directory setup
 echo - Created by Bas van Driel
