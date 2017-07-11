@@ -26,7 +26,7 @@ echo The install location is standard set to the user profile,
 ::
 :: Prompt the user for changing the folders install location
 :PROMPT
-echo (%FOLDERS_INSTALL_LOCATIONS%) do you want to change that? Y/[N]
+echo (%FOLDERS_INSTALL_LOCATIONS%) do you want to change that? (Y/N)
 SET /P TO_CHANGE_INSTALL_DIR=
 echo.
 IF /I "%TO_CHANGE_INSTALL_DIR%" NEQ "Y" GOTO END
