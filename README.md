@@ -18,7 +18,7 @@ Clone the repository to any directory on your computer and navigate to the bin f
 
 ```shell
 # Clones the repository
-git clone https://github.com/basvandriel/software-development-directory-setup.git
+git clone https://github.com/basvandriel/application-development-directory-setup.git
 
 # Navigate to the bin folder
 cd bin/
