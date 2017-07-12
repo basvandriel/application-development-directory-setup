@@ -68,14 +68,55 @@ exit /b
 FOR %%a IN (%FOLDER_NAMES%) DO (
 echo Starting to create internal for folders for "%%a"
 echo ...
+:: Create the base internal folders
 FOR %%b IN (%INTERNAL_FOLDER_NAMES%) DO (
 IF EXIST %FOLDERS_INSTALL_LOCATION%\%%a\%%b (
 echo The folder "%%b" already exists in "%FOLDERS_INSTALL_LOCATION%\%%a"
 ) ELSE (
-echo The folder "%%b" does not exist in "%FOLDERS_INSTALL_LOCATION%\%%a"
-echo Creating "%%b" in "%FOLDERS_INSTALL_LOCATION%\%%a"
+echo The folder "%%b" does not exist in "%FOLDERS_INSTALL_LOCATION%\%%a, creating it"
 md %FOLDERS_INSTALL_LOCATION%\%%a\%%b
 )
 )
 echo.
+:: Create specific folders
+CALL :create-specific-internal-folders-by-base-folder-name %%a
+echo.
 )
+exit /b
+
+:: Create specific internal folders
+:create-specific-internal-folders-by-base-folder-name
+:: Create specific web development folders
+IF "%1"=="Web_development" (
+echo Creating specific web development folders...
+CALL :create-specific-internal-folders-by-location-and-variable-name "%FOLDERS_INSTALL_LOCATION%\%1" "%WEB_DEVELOPMENT_FOLDERS%"
+echo Creating specific web development archive folders...
+CALL :create-specific-internal-folders-by-location-and-variable-name "%FOLDERS_INSTALL_LOCATION%\%1\Archive" "%WEB_DEVELOPMENT_ARCHIVE_FOLDERS%"
+)
+:: Create specific mobile application development folders
+IF "%1"=="Mobile_application_development" (
+echo adfl
+)
+:: Create specific desktop application development folders
+IF "%1"=="Desktop_application_development" (
+echo adfadf
+)
+:: Create specific other application development folders
+IF "%1"=="Other_application_development" (
+echo adfadf
+)
+exit /b
+
+:create-specific-internal-folders-by-location-and-variable-name
+:: Location is %~1
+FOR %%a IN (%~2) DO (
+:: %%a is each folder name
+IF EXIST %~1\%%a (
+echo The folder "%%a" already exists in "%~1"
+) ELSE (
+echo The folder "%%a" does not exist in "%~1, creating it
+md %~1\%%a
+)
+)
+echo.
+exit /b
