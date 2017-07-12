@@ -9,8 +9,8 @@ SET WEB_DEVELOPMENT_FOLDERS=Front_end_projects Back_end_projects
 SET WEB_DEVELOPMENT_ARCHIVE_FOLDERS=Front_end_projects Back_end_projects Scrapboard Exercise Other_stuff
 
 :: Set the specific mobile development folders we want to create
-SET MOBILE_DEVELOPMENT_FOLDERS=Android_projects IOS_projects
-SET MOBILE_DEVELOPMENT_ARCHIVE_FOLDERS=Android_projects IOS_projects Scrapboard Exercise Other_stuff
+SET MOBILE_APPLICATION_DEVELOPMENT_FOLDERS=Android_projects IOS_projects
+SET MOBILE_APPLICATION_DEVELOPMENT_ARCHIVE_FOLDERS=Android_projects IOS_projects Scrapboard Exercise Other_stuff
 
 :: Set the specific desktop application development folders we want to create
 SET DESKTOP_APPLICATION_DEVELOPMENT_FOLDERS=Projects
@@ -84,26 +84,31 @@ echo.
 )
 exit /b
 
-:: Create specific internal folders
+:: Create specific internal folders by folder name
 :create-specific-internal-folders-by-base-folder-name
 :: Create specific web development folders
 IF "%1"=="Web_development" (
-echo Creating specific web development folders...
 CALL :create-specific-internal-folders-by-location-and-variable-name "%FOLDERS_INSTALL_LOCATION%\%1" "%WEB_DEVELOPMENT_FOLDERS%"
-echo Creating specific web development archive folders...
 CALL :create-specific-internal-folders-by-location-and-variable-name "%FOLDERS_INSTALL_LOCATION%\%1\Archive" "%WEB_DEVELOPMENT_ARCHIVE_FOLDERS%"
+exit /b
 )
 :: Create specific mobile application development folders
 IF "%1"=="Mobile_application_development" (
-echo adfl
+CALL :create-specific-internal-folders-by-location-and-variable-name "%FOLDERS_INSTALL_LOCATION%\%1" "%MOBILE_APPLICATION_DEVELOPMENT_FOLDERS%"
+CALL :create-specific-internal-folders-by-location-and-variable-name "%FOLDERS_INSTALL_LOCATION%\%1\Archive" "%MOBILE_APPLICATION_DEVELOPMENT_FOLDERS%"
+exit /b
 )
 :: Create specific desktop application development folders
 IF "%1"=="Desktop_application_development" (
-echo adfadf
+CALL :create-specific-internal-folders-by-location-and-variable-name "%FOLDERS_INSTALL_LOCATION%\%1" "%DESKTOP_APPLICATION_DEVELOPMENT_FOLDERS%"
+CALL :create-specific-internal-folders-by-location-and-variable-name "%FOLDERS_INSTALL_LOCATION%\%1\Archive" "%DESKTOP_APPLICATION_DEVELOPMENT_FOLDERS%"
+exit /b
 )
 :: Create specific other application development folders
 IF "%1"=="Other_application_development" (
-echo adfadf
+CALL :create-specific-internal-folders-by-location-and-variable-name "%FOLDERS_INSTALL_LOCATION%\%1" "%OTHER_APPLICATION_DEVELOPMENT_FOLDERS%"
+CALL :create-specific-internal-folders-by-location-and-variable-name "%FOLDERS_INSTALL_LOCATION%\%1\Archive" "%OTHER_APPLICATION_DEVELOPMENT_FOLDERS%"
+exit /b
 )
 exit /b
 
@@ -118,5 +123,4 @@ echo The folder "%%a" does not exist in "%~1, creating it
 md %~1\%%a
 )
 )
-echo.
 exit /b
