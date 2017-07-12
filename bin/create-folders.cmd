@@ -1,5 +1,6 @@
 @echo off
 setlocal
+
 :: Set the folder names we want to create
 SET FOLDER_NAMES=Web_development Desktop_application_development Mobile_application_development Other_application_development
 SET INTERNAL_FOLDER_NAMES=Scrapboard Exercise Other_stuff Archive
@@ -70,14 +71,14 @@ exit /b
 :: Create internal folders
 :create-internal-folders
 FOR %%a IN (%FOLDER_NAMES%) DO (
-echo Starting to create internal for folders for "%%a."
+echo Starting to create internal for folders for "%%a".
 echo ...
 :: Create the base internal folders
 FOR %%b IN (%INTERNAL_FOLDER_NAMES%) DO (
 IF EXIST %FOLDERS_INSTALL_LOCATION%\%%a\%%b (
-echo The folder "%%b" already exists in "%FOLDERS_INSTALL_LOCATION%\%%a."
+echo The folder "%%b" already exists in "%FOLDERS_INSTALL_LOCATION%\%%a".
 ) ELSE (
-echo The folder "%%b" does not exist in "%FOLDERS_INSTALL_LOCATION%\%%a, creating it."
+echo The folder "%%b" does not exist in "%FOLDERS_INSTALL_LOCATION%\%%a, creating it".
 md %FOLDERS_INSTALL_LOCATION%\%%a\%%b
 )
 )
@@ -121,9 +122,9 @@ exit /b
 FOR %%a IN (%~2) DO (
 :: %%a is each folder name
 IF EXIST %~1\%%a (
-echo The folder "%%a" already exists in "%~1"
+echo The folder "%%a" already exists in "%~1".
 ) ELSE (
-echo The folder "%%a" does not exist in "%~1, creating it
+echo The folder "%%a" does not exist in "%~1, creating it.
 md %~1\%%a
 )
 )
