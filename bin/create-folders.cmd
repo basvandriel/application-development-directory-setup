@@ -40,6 +40,15 @@ SET /P FOLDERS_INSTALL_LOCATION="Install location: "
 :: Start creating the base folders
 echo Starting to create the base folders
 echo ...
+CALL :create-base-folders
+echo.
+CALL :create-internal-folders
+:: End the application
+pause
+exit /b
+
+:: Create base folders
+:create-base-folders
 FOR %%a IN (%FOLDER_NAMES%) DO (
 :: The folder is found, no need to create it
 IF EXIST %FOLDERS_INSTALL_LOCATION%\%%a (
@@ -52,5 +61,21 @@ echo "Created the %%a folder.
 echo.
 )
 )
-:: End the application
-pause
+exit /b
+
+:: Create internal folders
+:create-internal-folders
+FOR %%a IN (%FOLDER_NAMES%) DO (
+echo Starting to create internal for folders for "%%a"
+echo ...
+FOR %%b IN (%INTERNAL_FOLDER_NAMES%) DO (
+IF EXIST %FOLDERS_INSTALL_LOCATION%\%%a\%%b (
+echo The folder "%%b" already exists in "%FOLDERS_INSTALL_LOCATION%\%%a"
+) ELSE (
+echo The folder "%%b" does not exist in "%FOLDERS_INSTALL_LOCATION%\%%a"
+echo Creating "%%b" in "%FOLDERS_INSTALL_LOCATION%\%%a"
+md %FOLDERS_INSTALL_LOCATION%\%%a\%%b
+)
+)
+echo.
+)
