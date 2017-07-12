@@ -9,70 +9,7 @@ folder for unorganized files.
 An example of the directory structure can be found in the [EXAMPLE.txt](EXAMPLE.txt) file.
 
 I created this project because I want to learn more about shell scripting.
-```
-Install location:.
-│
-├───Desktop_application_development
-│   ├───Archive
-│   │   ├───Exercise
-│   │   ├───Other_stuff
-│   │   ├───Projects
-│   │   └───Scrapboard
-│   │       ├───Archive
-│   │       ├───Exercise
-│   │       ├───Other_stuff
-│   │       └───Projects
-│   ├───Exercise
-│   ├───Other_stuff
-│   ├───Projects
-│   └───Scrapboard
-│       ├───Archive
-│       ├───Exercise
-│       ├───Other_stuff
-│       └───Projects
-├───Mobile_application_development
-│   ├───Android_projects
-│   ├───Archive
-│   │   ├───Android_projects
-│   │   ├───Exercise
-│   │   ├───IOS_projects
-│   │   ├───Other_stuff
-│   │   └───Scrapboard
-│   ├───Exercise
-│   ├───IOS_projects
-│   ├───Other_stuff
-│   └───Scrapboard
-├───Other_application_development
-│   ├───Archive
-│   │   ├───Exercise
-│   │   ├───Other_stuff
-│   │   ├───Projects
-│   │   └───Scrapboard
-│   │       ├───Archive
-│   │       ├───Exercise
-│   │       ├───Other_stuff
-│   │       └───Projects
-│   ├───Exercise
-│   ├───Other_stuff
-│   ├───Projects
-│   └───Scrapboard
-│       ├───Archive
-│       ├───Exercise
-│       ├───Other_stuff
-│       └───Projects
-└───Web_development
-    ├───Archive
-    │   ├───Back_end_projects
-    │   ├───Exercise
-    │   ├───Front_end_projects
-    │   ├───Other_stuff
-    │   └───Scrapboard
-    ├───Back_end_projects
-    ├───Exercise
-    ├───Front_end_projects
-    ├───Other_stuff
-    └───Scrapboard
-```
+
 ## Requirements
 * The `git` tool
 
