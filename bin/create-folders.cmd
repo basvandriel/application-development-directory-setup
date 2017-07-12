@@ -1,5 +1,5 @@
 @echo off
-
+setlocal
 :: Set the folder names we want to create
 SET FOLDER_NAMES=Web_development Desktop_application_development Mobile_application_development Other_application_development
 SET INTERNAL_FOLDER_NAMES=Scrapboard Exercise Other_stuff Archive
@@ -25,24 +25,36 @@ echo Welcome to the application development directory setup
 echo - Created by Bas van Driel
 echo.
 :: Set the default install directory
-SET FOLDERS_INSTALL_LOCATIONS=%UserProfile%
+SET FOLDERS_INSTALL_LOCATION=%UserProfile%
 echo The install location is standard set to the user profile,
 ::
 :: Prompt the user for changing the folders install location
 :PROMPT
-echo (%FOLDERS_INSTALL_LOCATIONS%) do you want to change that? (Y/N)
+echo (%FOLDERS_INSTALL_LOCATION%) do you want to change that? (Y/N)
 SET /P TO_CHANGE_INSTALL_DIR=
 echo.
 IF /I "%TO_CHANGE_INSTALL_DIR%" NEQ "Y" GOTO END
 :: Prompt for the new install location
-SET /P FOLDERS_INSTALL_LOCATIONS="Install location: "
+SET /P FOLDERS_INSTALL_LOCATION="Install location: "
 :END
-echo.
-
-:: TODO Create the Web_development folder if it doesn't yet exist
-:: TODO Create the Desktop_application_development folder if it doesn't yet exist
-:: TODO Create the Other_application_development folder if it doesn't yet exist
-:: TODO Create the Mobile_application_development folder if it doesn't yet exist
-
+:: Start creating the base folders
+echo Starting to create the base folders
+echo ...
+FOR %%a IN (%FOLDER_NAMES%) DO (
+    :: The folder is found, no need to create it
+    IF EXIST %FOLDERS_INSTALL_LOCATION%\%%a (
+    echo The folder "%%a" already exists.
+    ) ELSE (
+    :: The folder is not found
+    echo The "%%a" folder can't be found! Creating it!
+    echo ...
+    md %FOLDERS_INSTALL_LOCATION%\%%a
+    echo "Created the %%a folder.
+    echo.
+    :: Create internal folders here
+    FOR %%b IN (%INTERNAL_FOLDER_NAMES%) DO (
+    md %FOLDERS_INSTALL_LOCATION%\%%a\%%b
+    )
+)
 :: End the application
 pause
