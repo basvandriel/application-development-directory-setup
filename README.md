@@ -24,13 +24,15 @@ git clone https://github.com/basvandriel/application-development-directory-setup
 cd bin/
 ```
 
-From there open the `create-folders.cmd` file with administrator rights and follow the instructions.
+On Windows open the `create-folders.cmd` file with administrator rights and follow the instructions.
+On Linux run the command `sh create-folders.sh`.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Authors
-This project was initially created by [Bas van Driel](https://github.com/basvandriel "GitHub page") ([@bvandriel](https://twitter.com/bvandriel "Twitter page")), where [these people](https://github.com/basvandriel/WWW/graphs/contributors) contributed to it.
+- [Bas van Driel](https://github.com/basvandriel "GitHub page") ([@bvandriel](https://twitter.com/bvandriel "Twitter page"))
+- [Marco van Poortvliet](https://www.github.com/marc0tjevp "GitHub page")
 
 ## Links
 * [Source code](https://github.com/basvandriel/application-development-directory-setup)
