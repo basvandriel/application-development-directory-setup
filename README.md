@@ -24,8 +24,10 @@ git clone https://github.com/basvandriel/application-development-directory-setup
 cd bin/
 ```
 
-On Windows open the `create-folders.cmd` file with administrator rights and follow the instructions.
-On Linux run the command `sh create-folders.sh`.
+On a Windows machine run the `create-folders.cmd` script with administrator rights and
+follow the instructions.
+
+On a Linux machine run the command `sh create-folders.sh` inside the `bin` folder.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
